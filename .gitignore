@@ -1,0 +1,57 @@
+# Dependências
+node_modules/
+package-lock.json
+yarn.lock
+
+# Resultados de testes
+test-results/
+playwright-report/
+*.traceviewer
+
+# Logs
+*.log
+logs/
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Screenshots e vídeos
+test-results/screenshots/
+test-results/videos/
+
+# Arquivos temporários
+tmp/
+.tmp/
+*.tmp
+
+# Builds
+dist/
+build/
+
+# Coverage
+coverage/
+.nyc_output/
+
+dist/
+build/
+*.log
+.DS_Store
+playwright-report/
+test-results/
+.env
+.env.local
+coverage/
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+.env*.local
+screenshots/
+videos/

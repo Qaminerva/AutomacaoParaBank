@@ -1,0 +1,26 @@
+export const testUserData = {
+  valid: {
+    firstName: 'João',
+    lastName: 'Silva',
+    address: 'Rua Teste 123',
+    city: 'São Paulo',
+    state: 'SP',
+    zipCode: '01234567',
+    phone: '1123456789',
+    ssn: '123456789',
+    username: 'joao_silva_' + Date.now(),
+    password: 'Test@1234',
+  },
+  invalidEmail: {
+    firstName: 'Maria',
+    lastName: 'Santos',
+    address: 'Avenida Principal 456',
+    city: 'Rio de Janeiro',
+    state: 'RJ',
+    zipCode: '20000000',
+    phone: '2187654321',
+    ssn: '987654321',
+    username: 'maria@invalid@test',
+    password: 'Test@5678',
+  },
+};

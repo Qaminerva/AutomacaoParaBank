@@ -1,0 +1,39 @@
+{
+  "name": "parabank-qa-automation",
+  "version": "2.0.0",
+  "description": "Comprehensive QA automation test suite for ParaBank using Playwright and TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:e2e": "playwright test --grep @e2e",
+    "test:security": "playwright test --grep @security",
+    "test:performance": "playwright test --grep @performance",
+    "test:single": "playwright test complete.spec.ts",
+    "test:parallel": "playwright test --workers=4",
+    "test:serial": "playwright test --workers=1",
+    "test:report:show": "playwright show-report"
+  },
+  "keywords": [
+    "qa",
+    "automation",
+    "playwright",
+    "testing",
+    "e2e",
+    "parabank"
+  ],
+  "author": "QA Team",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^7.0.2"
+  }
+}

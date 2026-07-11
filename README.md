@@ -417,5 +417,4 @@ César Minerva Analista de Qualidade SR
 ## 📄 Licença
 
 ISC
-#   A u t o m a c a o P a r a B a n k  
- 
+#

@@ -3,8 +3,8 @@ import { RegisterPage } from '../../src/pages/RegisterPage';
 type RegistrationData = Parameters<RegisterPage['fillRegistrationForm']>[0];
 
 export const VALID_CREDENTIALS = {
-  username: 'cesar.minerva',
-  password: 'Senha@123',
+  username: 'john',
+  password: 'demo',
 };
 
 const DEFAULT_ADDRESS = {

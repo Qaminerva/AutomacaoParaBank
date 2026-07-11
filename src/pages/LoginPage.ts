@@ -10,9 +10,9 @@ export class LoginPage extends BasePage {
   constructor(page: Page) {
     super(page);
     // Seletores corretos do formulário de login
-    this.usernameInput = page.locator('#loginPanel > form > div:nth-child(2) > input');
-    this.passwordInput = page.locator('#loginPanel > form > div:nth-child(4) > input');
-    this.loginButton = page.locator('#loginPanel > form > div:nth-child(5) > input');
+    this.usernameInput = page.locator('input[name="username"]');
+    this.passwordInput = page.locator('input[name="password"]');
+    this.loginButton = page.locator('input.button[value="Log In"]');
     this.errorMessage = page.locator('.error');
   }
 
@@ -28,9 +28,8 @@ export class LoginPage extends BasePage {
   }
 
   async isLoginSuccessful() {
-    // Verificar se redirecionou para a página de contas/overview
-    const currentUrl = this.page.url();
-    return currentUrl.includes('overview') || currentUrl.includes('accounts');
+    const logoutLink = this.page.locator('a:has-text("Log Out")');
+    return logoutLink.isVisible();
   }
 
   async isErrorMessageVisible() {

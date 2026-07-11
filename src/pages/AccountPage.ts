@@ -17,9 +17,9 @@ export class AccountPage extends BasePage {
     this.accountsLink = page.locator('a:has-text("Accounts")');
     this.transferLink = page.locator('a:has-text("Transfer Funds")');
     this.bilPayLink = page.locator('a:has-text("Bill Pay")');
-    this.logoutLink = page.locator('a:has-text("Logout")');
-    this.updateProfileLink = page.locator('a:has-text("Update Profile")');
-    this.changePasswordLink = page.locator('a:has-text("Change Password")');
+    this.logoutLink = page.locator('a:has-text("Log Out")');
+    this.updateProfileLink = page.locator('a:has-text("Update Contact Info")');
+    this.changePasswordLink = page.locator('a:has-text("Change Password"), a:has-text("Update Contact Info")');
     this.accountBalance = page.locator('td:has-text("Balance")');
     this.accountNumber = page.locator('td.ng-binding');
     this.transactionHistory = page.locator('table');
@@ -41,8 +41,7 @@ export class AccountPage extends BasePage {
   }
 
   async isLoggedIn() {
-    const currentUrl = this.page.url();
-    return currentUrl.includes('overview') || currentUrl.includes('accounts');
+    return this.logoutLink.isVisible();
   }
 
   async getAccountBalance() {

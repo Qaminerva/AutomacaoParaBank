@@ -95,42 +95,13 @@ export class RegisterPage extends BasePage {
   }
 
   async isSuccessMessageVisible() {
-    // Tentar múltiplas possibilidades de seletores de sucesso
-    try {
-      // Aguardar um pouco para garantir que a página está carregada
-      await this.page.waitForTimeout(1000);
-      
-      // Opção 1: Procurar pela mensagem de sucesso no texto
-      const bodyText = await this.page.locator('body').textContent();
-      
-      if (bodyText) {
-        // Verificar por mensagem de sucesso
-        if (bodyText.includes('Your account was created successfully') || 
-            bodyText.includes('Welcome') ||
-            bodyText.includes('successfully')) {
-          return true;
-        }
-        
-        // Verificar se NÃO há mensagem de erro
-        if (!bodyText.includes('already exists') && 
-            !bodyText.includes('errors') && 
-            !bodyText.includes('required')) {
-          // Se chegou aqui sem erros, pode ser sucesso
-          return true;
-        }
-      }
-      
-      // Opção 2: Verificar a URL
-      const currentUrl = this.page.url();
-      if (currentUrl.includes('overview') || currentUrl.includes('accounts')) {
-        return true;
-      }
-      
-      return false;
-    } catch (error) {
-      console.log('Erro ao verificar sucesso:', error);
-      return false;
+    const currentUrl = this.page.url();
+    if (currentUrl.includes('overview') || currentUrl.includes('openaccount')) {
+      return true;
     }
+
+    const successMessage = this.page.getByText('Your account was created successfully');
+    return successMessage.isVisible();
   }
 
   async fillRegistrationFormPartial(userData: Partial<{

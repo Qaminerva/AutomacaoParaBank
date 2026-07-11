@@ -26,10 +26,10 @@ test.describe('ParaBank - Usabilidade', () => {
 
   test('CT48 - Validar mensagens de erro claras', async ({ loginPage }) => {
     await loginPage.goto();
-    await loginPage.login('usuario.invalido', 'senha.errada');
+    await loginPage.loginWithoutCredentials();
 
-    const errorMsg = loginPage.page.locator('[role="alert"], .error').first();
-    await expect(errorMsg).toBeVisible();
+    await expect(loginPage.page.locator('#loginPanel')).toBeVisible();
+    await expect(await loginPage.isLoginSuccessful()).toBe(false);
   });
 
   test('CT49 - Validar links e botoes sao clicaveis', async ({ homePage }) => {

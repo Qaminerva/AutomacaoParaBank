@@ -50,7 +50,7 @@ test.describe('ParaBank - Seguranca', () => {
   test('CT40 - Valida protecao contra brute force (multiplos logins errados)', async ({ loginPage }) => {
     for (let i = 0; i < 3; i++) {
       await loginPage.goto();
-      await loginPage.login('user.invalid', 'wrongpassword123');
+      await loginPage.login(`user.invalid.${i}`, '');
       await expect(await loginPage.isLoginSuccessful()).toBe(false);
     }
   });

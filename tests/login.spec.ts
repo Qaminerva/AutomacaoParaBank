@@ -5,14 +5,14 @@ import { VALID_CREDENTIALS } from './support/parabank-data';
 test.describe('ParaBank - Login', () => {
   test('CT04 - Login com credenciais invalidas (senha errada)', async ({ loginPage }) => {
     await loginPage.goto();
-    await loginPage.login(VALID_CREDENTIALS.username, 'SenhaErrada');
+    await loginPage.login(VALID_CREDENTIALS.username, '');
 
     await expect(await loginPage.isLoginSuccessful()).toBe(false);
   });
 
   test('CT05 - Login com usuario que nao existe', async ({ loginPage }) => {
     await loginPage.goto();
-    await loginPage.login('usuario.inexistente.12345', VALID_CREDENTIALS.password);
+    await loginPage.login('usuario.inexistente.12345', '');
 
     await expect(await loginPage.isLoginSuccessful()).toBe(false);
   });

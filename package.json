@@ -14,7 +14,7 @@
     "test:e2e": "playwright test --grep @e2e",
     "test:security": "playwright test --grep @security",
     "test:performance": "playwright test --grep @performance",
-    "test:single": "playwright test complete.spec.ts",
+    "test:single": "playwright test tests/login.spec.ts",
     "test:parallel": "playwright test --workers=4",
     "test:serial": "playwright test --workers=1",
     "test:report:show": "playwright show-report"

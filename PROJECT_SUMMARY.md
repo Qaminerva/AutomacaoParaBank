@@ -63,9 +63,9 @@ utils/
 | 📝 Registro & Validação | 4 | Formulários e regras de negócio |
 | 💳 Funcionalidades | 4 | Operações de conta e transferências |
 | 👤 Perfil & Segurança | 3 | Configurações do usuário |
-| ⚙️ Validação de Formatos | 6 | Edge cases e formatos especiais |
+| ⚙️ Validação de Formatos | 6 | Casos limite e formatos especiais |
 | 🔄 Fluxo Completo (E2E) | 4 | Cenários end-to-end reais |
-| ⚠️ Edge Cases | 5 | Valores extremos e incomuns |
+| ⚠️ Casos Limite | 5 | Valores extremos e incomuns |
 | 🔒 Segurança | 5 | SQL Injection, XSS, HTTPS, Brute Force |
 | ⚡ Performance | 5 | Velocidade de carregamento e carga |
 | 🎨 Usabilidade | 5 | Responsividade, acessibilidade, UX |
@@ -167,7 +167,7 @@ npm run test:report:show
 - **CT29** - Múltiplos acessos consecutivos
 - **CT30** - Navegação entre páginas
 
-### CT31-CT35: Edge Cases
+### CT31-CT35: Casos Limite
 - **CT31** - Email com domínio incomum
 - **CT32** - SSN com valor mínimo
 - **CT33** - SSN com valor máximo
@@ -341,7 +341,20 @@ src/
     └── testConfig.ts (80 linhas)
 
 tests/
-└── complete.spec.ts (700+ linhas com 50 testes)
+├── acesso-registro.spec.ts
+├── login.spec.ts
+├── registro-validacoes.spec.ts
+├── conta-navegacao.spec.ts
+├── perfil.spec.ts
+├── formatos-casos-limite.spec.ts
+├── fluxos.spec.ts
+├── seguranca.spec.ts
+├── desempenho.spec.ts
+├── usabilidade.spec.ts
+├── fixtures/
+│   └── parabank.fixture.ts
+└── support/
+  └── parabank-data.ts
 ```
 
 ---

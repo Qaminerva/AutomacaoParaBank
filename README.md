@@ -1,226 +1,157 @@
-# 🎯 Automação ParaBank - QA Automation Suite
+<h1 align="center">Olá, sou César Minerva 👋</h1>
 
-[![Playwright](https://img.shields.io/badge/Playwright-v1.44-2EAD33?style=for-the-badge&logo=playwright)](https://playwright.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-v5.3-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org)
-[![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?style=for-the-badge&logo=node.js)](https://nodejs.org)
-[![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-blue?style=for-the-badge&logo=github)](https://github.com/features/actions)
+<h3 align="center">
+QA Engineer Sênior | Quality Engineering | Test Automation | Playwright | Cypress | API Testing | CI/CD
+</h3>
 
-> 🚀 Suite profissional de automação de testes End-to-End desenvolvida com **Playwright + TypeScript**, aplicando boas práticas de Engenharia de Qualidade de Software.
+<p align="center">
+  <a href="https://www.linkedin.com/in/cesarminerva/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  </a>
+
+  <a href="mailto:cesar.minerva.silva@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
+  </a>
+
+  <a href="https://github.com/Qaminerva">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+</p>
 
 ---
 
-## 🎯 Objetivo do Projeto
+# 👨‍💻 Sobre Mim
 
-O objetivo desta automação é validar os principais fluxos críticos da aplicação **ParaBank**, garantindo maior confiabilidade nas entregas, redução do esforço manual em testes regressivos e geração rápida de feedback para o time de desenvolvimento.
+Sou **QA Engineer Sênior**, atuando com **Engenharia de Qualidade de Software**, automação de testes e melhoria contínua dos processos de entrega.
 
-A solução foi estruturada pensando em:
+Minha atuação é focada em construir soluções de qualidade que aumentem a confiabilidade dos produtos, reduzam riscos e proporcionem feedback rápido para os times de desenvolvimento.
 
-- Qualidade contínua
-- Escalabilidade dos testes
-- Manutenibilidade do código
+🚀 Experiência em:
+
+- 🧪 Automação de testes End-to-End com **Playwright e Cypress**
+- 🔗 Testes de API REST utilizando **Postman**
+- 🏗️ Construção de frameworks de automação escaláveis
+- 🔄 Integração de testes em pipelines **CI/CD**
+- 📊 Estratégia, planejamento e execução de testes
+- 🤝 Atuação em times ágeis utilizando Scrum e Kanban
+- 🎯 Mentoria e compartilhamento de conhecimento em QA
+
+---
+
+# 🛠️ Stack Tecnológica
+
+## Automação e Testes
+
+<p>
+<img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white"/>
+<img src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white"/>
+<img src="https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white"/>
+<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white"/>
+</p>
+
+---
+
+## Linguagens
+
+<p>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
+</p>
+
+---
+
+## DevOps e Gestão
+
+<p>
+<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white"/>
+<img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white"/>
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
+<img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white"/>
+<img src="https://img.shields.io/badge/Azure_DevOps-0078D7?style=for-the-badge&logo=azure-devops&logoColor=white"/>
+</p>
+
+---
+
+# 🧪 Minha Atuação em QA
+
+✔ Estratégia e planejamento de testes  
+✔ Testes funcionais e regressivos  
+✔ Automação Web e API  
+✔ Testes End-to-End  
+✔ Testes exploratórios  
+✔ Validação de regras de negócio  
+✔ Criação de cenários BDD  
+✔ Análise de defeitos  
+✔ Qualidade integrada ao ciclo de desenvolvimento  
+✔ Cultura Shift-Left Testing  
+
+---
+
+# 🚀 Projetos em Destaque
+
+## 🔹 Automação ParaBank
+
+Suite profissional de automação utilizando:
+
+- Playwright
+- TypeScript
+- Page Object Model
+- Testes E2E
+- Relatórios HTML
 - Evidências automatizadas
-- Integração com processos CI/CD
+- CI/CD
+
+📌 50 cenários automatizados cobrindo fluxos críticos da aplicação.
 
 ---
 
-## 🎖️ Principais Destaques
+## 🔹 Automação de Sistemas Corporativos
 
-✅ **50 casos de testes automatizados**  
-🚀 Arquitetura baseada em **Page Object Model (POM)**  
-🔐 Testes de segurança e validações negativas  
-⚡ Monitoramento de performance  
-🔒 Cenários de autenticação e autorização  
-📊 Relatórios HTML detalhados  
-📸 Screenshots e vídeos em caso de falhas  
-🤖 Preparado para execução em pipelines CI/CD  
+Experiência com:
 
----
-
-## 🏗️ Arquitetura da Automação
-
-A automação utiliza o padrão **Page Object Model (POM)**, permitindo:
-
-- Separação entre código de teste e elementos da aplicação
-- Reutilização de componentes
-- Maior organização dos cenários
-- Facilidade de manutenção
-- Evolução contínua da suíte
-
-### Estrutura do Projeto
-AutomacaoParaBank/
-├── src/
-│ ├── pages/ # Page Objects
-│ ├── fixtures/ # Massa de dados
-│ └── utils/ # Funções auxiliares
-├── tests/ # Cenários automatizados
-├── reports/ # Relatórios de execução
-├── docs/ # Documentações
-├── .github/workflows/ # Pipeline CI/CD
-└── README.md
+- Automação Web
+- Testes API REST
+- Validação de integrações
+- Regressão automatizada
+- Processos fiscais e sistemas críticos
 
 ---
 
-## 📊 Cobertura de Testes
+# 🏆 Mentalidade QA
 
-A suíte contempla **50 cenários automatizados**, distribuídos nas principais áreas:
+> "A qualidade nunca é um acidente; é sempre o resultado de um esforço inteligente."
+>
+> — John Ruskin
 
-| Categoria | Cenários | Status |
-|-----------|----------|--------|
-| Cadastro e Registro | CT01 - CT11 | ✅ |
-| Login e Autenticação | CT03 - CT07 | ✅ |
-| Gestão de Conta | CT12 - CT15 | ✅ |
-| Perfil de Usuário | CT16 - CT17 | ✅ |
-| Segurança | CT18 - CT20 / CT36 - CT40 | ✅ |
-| Validação de Formatos | CT21 - CT26 | ✅ |
-| Fluxos de Negócio | CT27 - CT30 | ✅ |
-| Cenários Negativos | CT31 - CT35 | ✅ |
-| Performance | CT41 - CT45 | ✅ |
-| Usabilidade | CT46 - CT50 | ✅ |
+Minha visão de qualidade:
 
-**Total: 🚀 50 testes automatizados**
+🧠 Pensar como usuário  
+⚙️ Automatizar o que gera valor  
+🔍 Explorar riscos antes da produção  
+📈 Melhorar continuamente processos e produtos  
 
 ---
 
-## 🔐 Estratégia de Qualidade
+# 📚 Conhecimentos
 
-A automação contempla diferentes tipos de validação:
-
-### Testes Funcionais
-- Cadastro de usuários
-- Login
-- Navegação
-- Fluxos bancários
-- Validações de regras
-
-### Testes de Segurança
-- Autenticação inválida
-- Validação de entradas
-- SQL Injection
-- XSS
-- Controle de acesso
-
-### Testes de Performance
-Validação de:
-- Tempo de resposta
-- Carregamento das páginas
-- Execução dos principais fluxos
-
-### Testes de Usabilidade
-Validação de:
-- Mensagens ao usuário
-- Experiência de navegação
-- Comportamento dos componentes
+- Quality Engineering
+- Test Automation
+- API Testing
+- Agile Testing
+- CI/CD
+- Test Strategy
+- Software Quality
+- Continuous Improvement
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
-
-| Tecnologia | Utilização |
-|------------|------------|
-| Playwright | Automação End-to-End |
-| TypeScript | Desenvolvimento seguro e escalável |
-| Node.js | Ambiente de execução |
-| Git | Controle de versão |
-| GitHub Actions | Integração Contínua |
-| HTML Report | Evidências de execução |
-
----
-
-## 🚀 Execução do Projeto
-
-### Pré-requisitos
-
-Necessário possuir instalado:
-
-- Node.js 18+
-- npm
-- Git
-
-### 📥 Instalação
-
-```bash
-# Clone o repositório
-git clone https://github.com/Qaminerva/AutomacaoParaBank.git
-
-# Acesse a pasta
-cd AutomacaoParaBank
-
-# Instale as dependências
-npm install
-
-# Instale os navegadores do Playwright
-npx playwright install
-```
-
----
-
-## 🚀 Executar Todos os Testes
-
-### Executar todos os testes
-npm test
-
-### Executar em modo interativo
-npm run test:ui
-
-### Executar com navegador visível
-npm run test:headed
-
-### Visualizar relatório HTML
-npm run test:report:show
-
-
-📊 Evidências e Relatórios
-Após a execução dos testes, a automação gera:
-
-✅ Relatório HTML
-✅ Screenshots em caso de falhas
-✅ Vídeos das execuções
-✅ Logs detalhados
-✅ Histórico dos testes
-
-Essas evidências auxiliam:
-
-Investigação de defeitos
-Análise de regressão
-Comunicação com desenvolvimento
-Melhoria contínua da qualidade
-
-📈 Benefícios Entregues
-✔ Redução do esforço manual em testes regressivos
-✔ Maior confiabilidade nas entregas de software
-✔ Feedback rápido para desenvolvimento
-✔ Padronização dos cenários de testes
-✔ Maior cobertura dos fluxos críticos
-✔ Base preparada para evolução contínua
-
-👨‍💻 Desenvolvedor
-César Minerva
-QA Engineer | Analista de Qualidade Sênior
-
-Profissional especializado em:
-
-✔ Testes Manuais e Automatizados
-✔ Automação End-to-End
-✔ Testes API REST
-✔ Estratégia de Qualidade
-✔ CI/CD
-✔ Metodologias Ágeis
-
-🚀 Conhecimentos Técnicos
-Automação: Playwright • Cypress • Selenium
-API Testing: Postman • REST API
-DevOps: Git • GitHub Actions • Azure DevOps
-Gestão: Jira • Confluence • Scrum • Kanban
-Banco de Dados: SQL
-
-<div align="center">
-
-<img src="https://img.shields.io/badge/GitHub-@Qaminerva-black?style=for-the-badge&amp;logo=github" alt="GitHub">
-
-<img src="https://img.shields.io/badge/Email-cesarminerva30@icloud.com-red?style=for-the-badge&amp;logo=icloud" alt="Email">
-
-⭐ Projeto desenvolvido aplicando princípios de Engenharia de Qualidade de Software
+<p align="center">
 
 🚀 Quality Engineering | Test Automation | Continuous Improvement
 
-Desenvolvido com ❤️ & ☕
+<br>
+
+<i>Vamos construir software de qualidade juntos! 🤝</i>
+
+</p>

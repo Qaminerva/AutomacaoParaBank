@@ -1,6 +1,6 @@
 # 🧪 Automação ParaBank
 
-Suite profissional de testes end-to-end para a aplicação **ParaBank** utilizando **Playwright** e **TypeScript**.
+Suíte profissional de testes end-to-end para a aplicação **ParaBank** utilizando **Playwright** e **TypeScript**.
 
 [![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)](https://playwright.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
@@ -33,10 +33,10 @@ Cobertura completa incluindo:
 | Segurança | 6 | Validação de dados, proteção de conta |
 | Validações | 7 | Formatos, campos obrigatórios, limites |
 | Performance | 5 | Tempo de carregamento, responsividade |
-| E2E Flows | 8 | Fluxos completos de usuário |
+| Fluxos E2E | 8 | Fluxos completos de usuário |
 | Usabilidade | 3 | Navegação, acessibilidade |
 | Perfil | 2 | Atualização e validação de perfil |
-| Casos Limite | 2 | Edge cases e comportamentos extremos |
+| Casos Limite | 2 | Casos limítrofes e comportamentos extremos |
 
 ---
 
@@ -94,7 +94,7 @@ src/
 
 ### Automação
 
-- **Playwright** v1.44+ - Framework de automação End-to-End
+- **Playwright** v1.61+ - Framework de automação End-to-End
 - **TypeScript** v5.3+ - Linguagem fortemente tipada
 - **Node.js** v18+ - Runtime JavaScript
 
@@ -173,6 +173,27 @@ npx playwright install
 
 ```bash
 npm test
+```
+
+### Scripts úteis
+
+Alguns scripts úteis disponíveis no `package.json`:
+
+```bash
+# Executar todos os testes (headless)
+npm test
+
+# Executar testes com navegador visível
+npm run test:headed
+
+# Modo debug (Playwright inspector)
+npm run test:debug
+
+# Mostrar relatório HTML
+npm run test:report
+
+# Executar testes em paralelo (4 workers)
+npm run test:parallel
 ```
 
 ### Executar suite específica
@@ -394,6 +415,6 @@ Este projeto é licenciado sob a MIT License - veja o arquivo LICENSE para detal
 
 **Construindo qualidade através da automação estratégica** 🚀
 
-*Last Updated: 2024 | Maintained by César Minerva*
+*Last Updated: 2026-07-11 | Maintained by César Minerva*
 
 </div>

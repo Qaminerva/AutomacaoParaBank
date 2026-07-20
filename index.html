@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>César Minerva - Senior QA Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --tertiary: #334155;
+            --accent: #3b82f6;
+            --accent-light: #60a5fa;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: rgba(15, 23, 42, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .hero .subtitle {
+            font-size: 1.4rem;
+            color: var(--success);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .hero .location {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-light);
+            border: 2px solid var(--accent-light);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        /* Section Styles */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-box {
+            background: rgba(30, 41, 59, 0.8);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .stat-box:hover {
+            border-color: var(--success);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
+        }
+
+        .stat-box .number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--success);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-box .label {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Experience */
+        .experience-timeline {
+            position: relative;
+            padding: 0;
+        }
+
+        .experience-item {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border-left: 4px solid var(--accent);
+            margin-bottom: 2rem;
+            transition: all 0.3s;
+        }
+
+        .experience-item:hover {
+            border-left-color: var(--success);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
+            transform: translateX(5px);
+        }
+
+        .experience-title {
+            font-size: 1.3rem;
+            color: var(--accent-light);
+            margin-bottom: 0.3rem;
+        }
+
+        .experience-company {
+            font-size: 1rem;
+            color: var(--success);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-period {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .experience-desc {
+            color: var(--text);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: rgba(59, 130, 246, 0.2);
+            color: var(--accent-light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 0.25rem;
+            font-size: 0.8rem;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            transition: all 0.3s;
+        }
+
+        .skill-card:hover {
+            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.1);
+        }
+
+        .skill-card h3 {
+            color: var(--accent-light);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: rgba(59, 130, 246, 0.2);
+            color: var(--accent-light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 0.25rem;
+            font-size: 0.85rem;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-light);
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+
+        .highlight {
+            color: var(--accent-light);
+            font-weight: 600;
+        }
+
+        .info-box {
+            background: rgba(30, 41, 59, 0.8);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .info-box ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .info-box li {
+            padding: 0.5rem 0;
+            color: var(--text);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(51, 65, 85, 0.9) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent-light);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+        }
+
+        .project-card:hover::before {
+            left: 100%;
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-icon {
+            font-size: 2rem;
+            min-width: 50px;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            color: var(--accent-light);
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .project-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        .project-description {
+            color: var(--text);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .project-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--success);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .project-tag {
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--accent-light);
+            padding: 0.35rem 0.75rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        /* Achievements */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .achievement-card {
+            background: rgba(30, 41, 59, 0.8);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            transition: all 0.3s;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.15);
+        }
+
+        .achievement-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-card h3 {
+            color: var(--accent-light);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 0.5rem;
+            color: var(--accent-light);
+            text-decoration: none;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s;
+        }
+
+        .contact-link:hover {
+            border-color: var(--accent-light);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(15, 23, 42, 0.95);
+            border-top: 1px solid rgba(59, 130, 246, 0.1);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">César Minerva</div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#experience">Experiência</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#achievements">Destaques</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero fade-in">
+        <h1>César Minerva</h1>
+        <p class="subtitle">Senior QA Engineer | Test Automation | Quality Engineering</p>
+        <p class="location">📍 Joinville, SC, Brasil | 🏢 Stefanini Group | 🌐 100% Remoto</p>
+        <p class="description">
+            Senior QA Engineer especializado em automação de testes com <strong>Playwright</strong>, <strong>Cypress</strong> e <strong>TypeScript</strong>. Referência em Quality Engineering, liderando estratégias de automação, métricas em Power BI e implementação de IA em testes. Apaixonado por qualidade, inovação e desenvolvimento de pessoas.
+        </p>
+        <div class="cta-buttons">
+            <a href="#experience" class="btn btn-primary">Ver Experiência</a>
+            <a href="https://www.linkedin.com/in/cesarminerva/" target="_blank" class="btn btn-secondary">LinkedIn</a>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-grid" style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+        <div class="stat-box">
+            <div class="number">2.260+</div>
+            <div class="label">Seguidores LinkedIn</div>
+        </div>
+        <div class="stat-box">
+            <div class="number">4+</div>
+            <div class="label">Anos de Experiência</div>
+        </div>
+        <div class="stat-box">
+            <div class="number">27</div>
+            <div class="label">Certificações</div>
+        </div>
+        <div class="stat-box">
+            <div class="number">QA Sênior</div>
+            <div class="label">Posição Atual</div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title">Experiência Profissional</h2>
+        
+        <div class="experience-timeline">
+            <!-- Current Role -->
+            <div class="experience-item fade-in">
+                <div class="experience-title">Analista de Qualidade Sr</div>
+                <div class="experience-company">Stefanini Group - Projeto SEFA</div>
+                <div class="experience-period">Jan 2026 - Atual | Belém, PA (Remoto)</div>
+                <div class="experience-desc">
+                    Referência de Quality Engineering responsável pela implementação e evolução da estratégia de qualidade. Liderança técnica em automação de testes, definição de padrões e boas práticas. Estruturação de métricas estratégicas e integração com IA para automação inteligente.
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Cypress</span>
+                    <span class="tech-tag">Playwright</span>
+                    <span class="tech-tag">APIs REST</span>
+                    <span class="tech-tag">CI/CD</span>
+                    <span class="tech-tag">Power BI</span>
+                    <span class="tech-tag">IA aplicada</span>
+                </div>
+            </div>
+
+            <!-- Previous Role -->
+            <div class="experience-item fade-in">
+                <div class="experience-title">Analista de Qualidade Pl</div>
+                <div class="experience-company">Stefanini Group - Projeto SEFA</div>
+                <div class="experience-period">Nov 2024 - Dez 2025 | Recife, PE</div>
+                <div class="experience-desc">
+                    Liderança de estratégia de qualidade em projeto de grande escala. Automação de testes E2E, API e integração. Implementação de pipelines CI/CD. Definição de métricas e padrões de QA.
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Cypress</span>
+                    <span class="tech-tag">Playwright</span>
+                    <span class="tech-tag">Selenium</span>
+                    <span class="tech-tag">Postman</span>
+                    <span class="tech-tag">Jira</span>
+                    <span class="tech-tag">Confluence</span>
+                </div>
+            </div>
+
+            <!-- Jr Role -->
+            <div class="experience-item fade-in">
+                <div class="experience-title">Analista de Qualidade Jr</div>
+                <div class="experience-company">Stefanini Group</div>
+                <div class="experience-period">Ago 2022 - Nov 2024 | 100% Remoto</div>
+                <div class="experience-desc">
+                    Testes funcionais, automatizados e E2E em projetos como FIRJAN e Banco Amazonas. Desenvolvimento de planos de teste, automação com Selenium. Participação ativa em cerimônias Scrum.
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Selenium</span>
+                    <span class="tech-tag">JUnit</span>
+                    <span class="tech-tag">Postman</span>
+                    <span class="tech-tag">Jira</span>
+                    <span class="tech-tag">Scrum</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Habilidades Técnicas</h2>
+        
+        <div class="skills-grid">
+            <div class="skill-card fade-in">
+                <h3>🧪 Automação de Testes</h3>
+                <div class="skill-tags">
+                    <span class="tag">Playwright</span>
+                    <span class="tag">Cypress</span>
+                    <span class="tag">Selenium</span>
+                    <span class="tag">E2E Testing</span>
+                    <span class="tag">API Testing</span>
+                    <span class="tag">Postman</span>
+                </div>
+            </div>
+
+            <div class="skill-card fade-in">
+                <h3>� Testes Manuais & Exploratórios</h3>
+                <div class="skill-tags">
+                    <span class="tag">Test Planning</span>
+                    <span class="tag">Exploratory Testing</span>
+                    <span class="tag">Test Cases</span>
+                    <span class="tag">Bug Reporting</span>
+                    <span class="tag">Casos Limite</span>
+                    <span class="tag">Usabilidade</span>
+                </div>
+            </div>
+
+            <div class="skill-card fade-in">
+                <h3>�💻 Linguagens & Frameworks</h3>
+                <div class="skill-tags">
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">JUnit</span>
+                </div>
+            </div>
+
+            <div class="skill-card fade-in">
+                <h3>🏗️ Arquitetura & Padrões</h3>
+                <div class="skill-tags">
+                    <span class="tag">Page Object Model</span>
+                    <span class="tag">Design Patterns</span>
+                    <span class="tag">Clean Code</span>
+                    <span class="tag">SOLID</span>
+                    <span class="tag">BDD</span>
+                    <span class="tag">TDD</span>
+                </div>
+            </div>
+
+            <div class="skill-card fade-in">
+                <h3>🔒 Testes de Segurança</h3>
+                <div class="skill-tags">
+                    <span class="tag">OWASP</span>
+                    <span class="tag">SQL Injection</span>
+                    <span class="tag">XSS Testing</span>
+                    <span class="tag">Vulnerabilities</span>
+                    <span class="tag">HTTPS</span>
+                </div>
+            </div>
+
+            <div class="skill-card fade-in">
+                <h3>📊 DevOps & CI/CD</h3>
+                <div class="skill-tags">
+                    <span class="tag">GitHub Actions</span>
+                    <span class="tag">Jenkins</span>
+                    <span class="tag">Power BI</span>
+                    <span class="tag">Jira</span>
+                    <span class="tag">Confluence</span>
+                    <span class="tag">Git</span>
+                </div>
+            </div>
+
+            <div class="skill-card fade-in">
+                <h3>🤖 Inovação & IA</h3>
+                <div class="skill-tags">
+                    <span class="tag">GitHub Copilot</span>
+                    <span class="tag">IA para Automação</span>
+                    <span class="tag">Métricas Inteligentes</span>
+                    <span class="tag">Data-Driven</span>
+                    <span class="tag">Observabilidade</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projetos & Automações</h2>
+            
+            <div class="projects-grid">
+                <!-- SEFA Project -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">⚙️</div>
+                        <div>
+                            <h3 class="project-title">SEFA</h3>
+                            <p class="project-subtitle">Sistema Fiscal - Automação E2E + API</p>
+                        </div>
+                    </div>
+                    
+                    <p class="project-description">
+                        Suite robusta de automação para sistema fiscal crítico. Combina testes E2E de interface com testes de API em um único pipeline, gerando evidências, métricas consolidadas e dashboard de acompanhamento.
+                    </p>
+                    
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-number">26</span>
+                            <span class="stat-label">Specs E2E+API</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">95%+</span>
+                            <span class="stat-label">Taxa Sucesso</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">8m</span>
+                            <span class="stat-label">Tempo Execução</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Fluxos Críticos</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-tags">
+                        <span class="project-tag">Cypress 14</span>
+                        <span class="project-tag">E2E Testing</span>
+                        <span class="project-tag">API Testing</span>
+                        <span class="project-tag">Mochawesome</span>
+                        <span class="project-tag">Power BI</span>
+                        <span class="project-tag">Dashboard</span>
+                        <span class="project-tag">Métricas</span>
+                        <span class="project-tag">CI/CD</span>
+                    </div>
+                </div>
+
+                <!-- ParaBank Project -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">🏦</div>
+                        <div>
+                            <h3 class="project-title">ParaBank</h3>
+                            <p class="project-subtitle">Plataforma Bancária - Testes E2E</p>
+                        </div>
+                    </div>
+                    
+                    <p class="project-description">
+                        Suite completa de automação para plataforma de banking demo. Testes funcionais, de usabilidade e casos limite com cobertura abrangente de fluxos críticos de conta e transferências.
+                    </p>
+                    
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Test Cases</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">90%+</span>
+                            <span class="stat-label">Taxa Sucesso</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10m</span>
+                            <span class="stat-label">Tempo Execução</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Cobertura</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-tags">
+                        <span class="project-tag">Playwright</span>
+                        <span class="project-tag">E2E Testing</span>
+                        <span class="project-tag">POM Pattern</span>
+                        <span class="project-tag">TypeScript</span>
+                        <span class="project-tag">Testes Manuais</span>
+                        <span class="project-tag">Casos Limite</span>
+                        <span class="project-tag">Usabilidade</span>
+                        <span class="project-tag">GitHub</span>
+                    </div>
+                </div>
+
+                <!-- Manual Testing -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">🔬</div>
+                        <div>
+                            <h3 class="project-title">Testes Manuais & Exploratórios</h3>
+                            <p class="project-subtitle">Expertise em Qualidade</p>
+                        </div>
+                    </div>
+                    
+                    <p class="project-description">
+                        Profundo conhecimento em testes manuais, planejamento de testes, exploração de cenários complexos e identificação de casos limite. Experiência com sistemas críticos (fiscais, financeiros e governamentais).
+                    </p>
+                    
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Anos Experiência</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Testes Executados</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">Bugs Reportados</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Acurácia</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-tags">
+                        <span class="project-tag">Test Planning</span>
+                        <span class="project-tag">Exploratory</span>
+                        <span class="project-tag">SEFA/Fiscal</span>
+                        <span class="project-tag">FIRJAN</span>
+                        <span class="project-tag">Banco Amazonas</span>
+                        <span class="project-tag">Casos Limite</span>
+                        <span class="project-tag">Bug Report</span>
+                        <span class="project-tag">Documentação</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <h2 class="section-title">Destaques & Conquistas</h2>
+        
+        <div class="achievements-grid">
+            <div class="achievement-card fade-in">
+                <div class="achievement-icon">📚</div>
+                <h3>Pós-graduação em Engenharia de Software</h3>
+                <p>Especialização completa com 600 horas em engenharia de software, arquitetura, qualidade e governança de TI (Set 2025 - Mar 2026)</p>
+            </div>
+
+            <div class="achievement-card fade-in">
+                <div class="achievement-icon">⭐</div>
+                <h3>Promoção a QA Sênior</h3>
+                <p>Reconhecimento profissional pela dedicação, aprendizado contínuo e compromisso com excelência na Stefanini Group</p>
+            </div>
+
+            <div class="achievement-card fade-in">
+                <div class="achievement-icon">🎓</div>
+                <h3>27 Certificações Ativas</h3>
+                <p>Incluindo IA para Produtividade, Agile, Quality Engineering, Automação de Testes e muito mais</p>
+            </div>
+
+            <div class="achievement-card fade-in">
+                <div class="achievement-icon">👥</div>
+                <h3>Mentoria & Liderança</h3>
+                <p>Mentoria ativa de profissionais em QA, compartilhamento de conhecimento e desenvolvimento de pessoas no time</p>
+            </div>
+
+            <div class="achievement-card fade-in">
+                <div class="achievement-icon">🎤</div>
+                <h3>Palestras & Dojos</h3>
+                <p>Apresentação de temas como "Aprimorando Testes com IA" e "Monitoramento com Power BI" - 100% de relevância</p>
+            </div>
+
+            <div class="achievement-card fade-in">
+                <div class="achievement-icon">📈</div>
+                <h3>Estratégia de Qualidade Data-Driven</h3>
+                <p>Estruturação de métricas estratégicas e dashboards em Power BI para tomada de decisão baseada em dados</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">Sobre Mim</h2>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Profissional de QA com Visão Estratégica</h3>
+                <p>
+                    Sou um <span class="highlight">Senior QA Engineer</span> com mais de 4 anos de experiência contínua em automação de testes. Meu crescimento profissional reflete uma trajetória de dedicação, aprendizado e busca constante por excelência.
+                </p>
+                <p>
+                    Acredito que <span class="highlight">qualidade vai além de encontrar defeitos</span> — é sobre <span class="highlight">construir confiança</span>, <span class="highlight">reduzir riscos</span> e <span class="highlight">acelerar entregas</span> com previsibilidade e dados concretos.
+                </p>
+                <p>
+                    Meu diferencial está em combinar <span class="highlight">expertise técnica profunda</span> com <span class="highlight">pensamento estratégico</span>. Atuo como referência de Quality Engineering, estruturando estratégias de automação, implementando métricas em Power BI e explorando IA como ferramenta de inovação.
+                </p>
+                <p>
+                    Sou apaixonado por <span class="highlight">compartilhar conhecimento</span> e <span class="highlight">desenvolver pessoas</span>, atuando como mentor e líder técnico em meu time.
+                </p>
+            </div>
+            <div class="info-box">
+                <h3 style="color: var(--accent-light); margin-bottom: 1.5rem;">📋 Perfil Profissional</h3>
+                <ul>
+                    <li><strong>🏢 Empresa:</strong> Stefanini Group</li>
+                    <li><strong>👔 Posição:</strong> Senior QA Engineer</li>
+                    <li><strong>📍 Localização:</strong> Joinville, SC</li>
+                    <li><strong>💼 Modelo:</strong> 100% Remoto</li>
+                    <li><strong>⏱️ Experiência:</strong> 4+ anos em QA</li>
+                    <li><strong>📚 Formação:</strong> Pós-grad. Eng. Software</li>
+                    <li><strong>🎓 Certificações:</strong> 27 Ativas</li>
+                    <li><strong>👥 Seguidores:</strong> 2.260+</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Vamos Conectar?</h2>
+        
+        <div class="contact-content">
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Estou sempre aberto a conversas sobre QA, automação, qualidade de software e novas oportunidades profissionais. Conecte comigo!
+            </p>
+            
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/cesarminerva/" target="_blank" class="contact-link">
+                    <span>🔗</span>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/scsilva8" target="_blank" class="contact-link">
+                    <span>💻</span>
+                    <span>GitHub</span>
+                </a>
+                <a href="mailto:cesar.minerva@email.com" class="contact-link">
+                    <span>📧</span>
+                    <span>Email</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p style="margin-bottom: 0.5rem;">&copy; 2026 César Minerva - Senior QA Engineer. Todos os direitos reservados.</p>
+        <p style="font-size: 0.9rem;">Desenvolvido com ❤️ | <a href="https://github.com/scsilva8/Portif-lio" target="_blank" style="color: var(--accent-light);">GitHub</a></p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.animation = 'fadeInUp 0.6s ease-out';
+                }
+            });
+        });
+
+        document.querySelectorAll('.experience-item, .skill-card, .achievement-card').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
